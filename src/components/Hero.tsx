@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
+import AnimatedTextCycle from './ui/animated-text-cycle';
 
 export default function Hero() {
   return (
@@ -13,7 +14,15 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="font-display text-6xl md:text-8xl lg:text-[120px] uppercase leading-[0.9] tracking-tighter text-on-background"
           >
-            WE BUILD THE <span className="text-aura-accent">FUTURE</span> OF INTELLIGENCE.
+            WE BUILD THE <span className="text-aura-accent"><AnimatedTextCycle 
+              words={["FUTURE", "WEB", "TOMORROW", "INNOVATION"]}
+              interval={3000}
+              className="text-aura-accent"
+            /></span> OF <span className="text-aura-accent"><AnimatedTextCycle 
+              words={["INTELLIGENCE", "AUTONOMY", "TOMORROW", "REVOLUTION"]}
+              interval={3000}
+              className="text-aura-accent"
+            /></span>.
           </motion.h1>
         </div>
       </div>
@@ -38,12 +47,12 @@ export default function Hero() {
           <div className="font-mono text-6xl group-hover:text-white">99% UPTIME</div>
         </div>
         <div className="p-12 border-b md:border-b-0 md:divider-x group hover:bg-aura-accent transition-colors duration-500 cursor-pointer">
-          <div className="font-mono text-sm uppercase mb-4 group-hover:text-white">Proprietary</div>
-          <div className="font-mono text-6xl group-hover:text-white">12+ MODELS</div>
+          <div className="font-mono text-sm uppercase mb-4 group-hover:text-white">Projects</div>
+          <div className="font-mono text-6xl group-hover:text-white">53+ projects</div>
         </div>
         <div className="p-12 group hover:bg-aura-accent transition-colors duration-500 cursor-pointer">
-          <div className="font-mono text-sm uppercase mb-4 group-hover:text-white">Economic Output</div>
-          <div className="font-mono text-6xl group-hover:text-white">$50M+ IMPACT</div>
+          <div className="font-mono text-sm uppercase mb-4 group-hover:text-white">Availability</div>
+          <div className="font-mono text-6xl group-hover:text-white">24/7 hr/days </div>
         </div>
       </div>
     </section>

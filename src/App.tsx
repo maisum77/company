@@ -29,8 +29,11 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    // Preserve hash-driven section navigation (e.g., /services#ai-integration).
+    if (location.hash) return;
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return (
     <div className="relative selection:bg-aura-accent selection:text-white">

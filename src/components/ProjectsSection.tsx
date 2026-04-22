@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function ProjectsSection() {
   const projects = [
@@ -29,9 +31,13 @@ export default function ProjectsSection() {
     <section className="px-12 py-24">
       <div className="flex justify-between items-end mb-24">
         <h2 className="font-display text-4xl md:text-5xl uppercase">SELECTED WORKS</h2>
-        <div className="font-mono text-sm uppercase text-aura-accent flex items-center gap-2">
-          Archive (24) <span className="material-symbols-outlined">arrow_forward</span>
-        </div>
+        <Link
+          to="/tech-stack"
+          className="font-mono text-sm uppercase text-aura-accent hover:text-white transition-colors hover:bg-aura-accent/10 px-4 py-2 rounded inline-flex items-center gap-2"
+          aria-label="Explore tech stack"
+        >
+          Explore Tech Stack <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {projects.map((project) => (

@@ -8,6 +8,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
+import TechStackPage from './pages/TechStackPage';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="case-studies" element={<CaseStudiesPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="tech-stack" element={<TechStackPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
