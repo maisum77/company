@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#621100",
+                    "surface-container-highest": "#353434",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-background": "#e5e2e1",
+                    "on-error": "#690005",
+                    "primary": "#c9c6c5",
+                    "on-tertiary-container": "#e53600",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-variant": "#353434",
+                    "on-primary-fixed-variant": "#474646",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "primary-fixed-dim": "#c9c6c5",
+                    "surface-container-high": "#2b2a2a",
+                    "surface-bright": "#3a3939",
+                    "on-primary-container": "#7b7979",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-container": "#b4b5b5",
+                    "surface": "#141313",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#454747",
+                    "tertiary-fixed-dim": "#ffb4a2",
+                    "on-tertiary-fixed": "#3c0700",
+                    "on-surface-variant": "#c4c7c7",
+                    "tertiary-container": "#1d0200",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface": "#e5e2e1",
+                    "surface-tint": "#c9c6c5",
+                    "outline-variant": "#444748",
+                    "on-secondary": "#2f3131",
+                    "inverse-primary": "#5f5e5e",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container": "#201f1f",
+                    "on-primary": "#313030",
+                    "error-container": "#93000a",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-primary-fixed": "#1c1b1b",
+                    "background": "#141313",
+                    "outline": "#8e9192",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#ffdad2",
+                    "secondary": "#c6c6c7",
+                    "primary-container": "#0a0a0a",
+                    "surface-dim": "#141313",
+                    "inverse-on-surface": "#313030",
+                    "tertiary": "#ffb4a2",
+                    "on-tertiary-fixed-variant": "#8a1d00",
+                    "vermillion": "#FF3D00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "accent-underline": "4px",
+                    "margin": "48px",
+                    "unit": "4px",
+                    "divider-weight": "1px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter Tight"],
+                    "headline-lg": ["Inter Tight"],
+                    "stat-lg": ["JetBrains Mono"],
+                    "display-2xl": ["Inter Tight"],
+                    "serif-accent": ["Playfair Display"],
+                    "label-sm": ["JetBrains Mono"],
+                    "display-xl": ["Inter Tight"]
+            },
+            "fontSize": {
+                    "body-md": ["18px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "44px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "stat-lg": ["24px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "display-2xl": ["120px", {"lineHeight": "100px", "letterSpacing": "-0.06em", "fontWeight": "900"}],
+                    "serif-accent": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-xl": ["80px", {"lineHeight": "72px", "letterSpacing": "-0.06em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.015;
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 50;
+        }
+        .divider-x { border-right: 1px solid #FAFAFA; }
+        .divider-y { border-bottom: 1px solid #FAFAFA; }
+        .active-nav { border-bottom: 2px solid #FF3D00; padding-bottom: 4px; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #FF3D00; }
+    </style>
+</head>
+<body class="bg-primary-container text-on-background font-body-md overflow-x-hidden selection:bg-vermillion selection:text-white">
+<div class="grain"></div>
+<!-- Navigation Shell -->
+<header class="bg-[#0A0A0A] docked full-width top-0 border-b border-[#FAFAFA] z-40 fixed w-full">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-[#FAFAFA]">MANIFESTO.AI</div>
+<nav class="hidden md:flex gap-12">
+<a class="font-['Inter_Tight'] text-sm uppercase tracking-widest text-[#FAFAFA] border-b-2 border-[#FF3D00] pb-1 hover:text-[#FF3D00] transition-all duration-300" href="#">Work</a>
+<a class="font-['Inter_Tight'] text-sm uppercase tracking-widest text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-all duration-300" href="#">Studio</a>
+<a class="font-['Inter_Tight'] text-sm uppercase tracking-widest text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-all duration-300" href="#">Intelligence</a>
+<a class="font-['Inter_Tight'] text-sm uppercase tracking-widest text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-all duration-300" href="#">Contact</a>
+</nav>
+<button class="bg-[#FAFAFA] text-[#0A0A0A] font-['JetBrains_Mono'] text-xs uppercase px-6 py-2 hover:bg-[#FF3D00] transition-colors">Get Started</button>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col justify-end px-12 pb-24 border-b border-[#FAFAFA]">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-10">
+<h1 class="font-display-2xl text-on-background uppercase break-words">
+                        WE BUILD THE <span class="text-vermillion">FUTURE</span> OF INTELLIGENCE.
+                    </h1>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-gutter mt-12 items-end">
+<div class="col-span-12 md:col-span-4 font-label-sm text-on-surface-variant uppercase">
+                    Architecting autonomy for the next web.<br/>Swiss engineering. Punk aesthetics.
+                </div>
+<div class="col-span-12 md:col-span-8 flex justify-end">
+<span class="material-symbols-outlined text-vermillion text-6xl animate-bounce">south</span>
+</div>
+</div>
+</section>
+<!-- Stats Section (Full Width) -->
+<section class="grid grid-cols-1 md:grid-cols-3 border-b border-[#FAFAFA]">
+<div class="p-12 border-b md:border-b-0 md:divider-x group hover:bg-vermillion transition-colors duration-500">
+<div class="font-label-sm uppercase mb-4 group-hover:text-white">Reliability</div>
+<div class="font-stat-lg text-6xl group-hover:text-white">99% UPTIME</div>
+</div>
+<div class="p-12 border-b md:border-b-0 md:divider-x group hover:bg-vermillion transition-colors duration-500">
+<div class="font-label-sm uppercase mb-4 group-hover:text-white">Proprietary</div>
+<div class="font-stat-lg text-6xl group-hover:text-white">12+ MODELS</div>
+</div>
+<div class="p-12 group hover:bg-vermillion transition-colors duration-500">
+<div class="font-label-sm uppercase mb-4 group-hover:text-white">Economic Output</div>
+<div class="font-stat-lg text-6xl group-hover:text-white">$50M+ IMPACT</div>
+</div>
+</section>
+<!-- Founders Section: THE THREE -->
+<section class="px-12 py-24 border-b border-[#FAFAFA]">
+<div class="mb-24">
+<h2 class="font-headline-lg uppercase text-vermillion">THE THREE</h2>
+<div class="w-24 h-1 bg-[#FAFAFA] mt-4"></div>
+</div>
+<div class="grid grid-cols-12 gap-12">
+<!-- Asymmetric Grid Logic -->
+<div class="col-span-12 md:col-span-5 aspect-[4/5] bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="close-up portrait of a tech founder with sharp features and futuristic glasses in high contrast black and white lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBALSQc7jQJO-gYDdeEgqUUS-QIv5OvvPHf713oM3uZvrIQd39ds5A17vMhOfhK4kRpeTBCZ2rIMr-YOEtjjNtj_TUZCBuO20cpujSXgsL8J4PRUrgxrMAmPc5AKLO2HenB7vLziZTLpisnVOLQoyBKv5i6OPwSLTIcJ7Uufm3T5yn_2sHOtbH3tT8qeokwXj8bg8sS02X8Rq-OrIO9QUKcP6ZAccEhykPqz5hwO3l9KyAVEVhi9xAg2gMSgIhTtG4fiQOKUi6TcAE"/>
+<div class="absolute bottom-0 left-0 p-8 bg-primary-container/90 w-full transform translate-y-full group-hover:translate-y-0 transition-transform">
+<p class="font-stat-lg text-vermillion">ELIAS VANCE</p>
+<p class="font-label-sm uppercase mt-2">Chief Intelligence Architect</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 flex flex-col justify-center">
+<div class="max-w-xl">
+<p class="font-headline-lg mb-8 leading-tight">CRAFTING BOLD NARRATIVES THROUGH REINFORCEMENT LEARNING.</p>
+<p class="font-body-md text-on-surface-variant">Manifesto was born from a singular vision: that intelligence shouldn't just be functional—it should be intentional. We reject the generic.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 mt-12">
+<div class="aspect-square bg-surface-container mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="dramatic profile shot of a woman with minimalist aesthetic in harsh lighting with deep shadows and industrial background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtUCP95U_P0BYyjw-T6aZcBZ9U2splq0meEqSGmGhouPoU9TKxsinvExYluxMfYxF_a7_rxz3xTVIb19j0D0VIsfk1Q4DoXvn2pKH9vil_z8Lw6_MbWsreATsIuf1_cMFlm3V6-YtQZSLKpcMK44WYrXJ5686SR444qN6mY7nhNH6tfC2Q14M_r4pTIF6JQmH_AjHlSLkQdv85uZ8ji92DqJksGgBNKy4v78HOokW0bqn-7_YBYUuNK_wmJfy81NspoB1HqIH-zcQ"/>
+</div>
+<p class="font-stat-lg">SARA KROSS</p>
+<p class="font-label-sm uppercase text-vermillion">Product Strategy</p>
+</div>
+<div class="col-span-12 md:col-span-4 mt-0 md:mt-24">
+<div class="aspect-square bg-surface-container mb-6 overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="monochrome portrait of a designer looking directly into camera with intense expression and grain texture effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFHWfOLeapwm8QZMsp8B3QmeW507RayKNGwDUokvq7-cpCX2566EbCfVkHJ5iSsFLYm-fX541fpiaZY_Bzi9NwrIiiU7Ou5tEwFypMtWhKOJhqfKjBNpq1hweOSMyKAQV1OCB92NTMiXHkhvygfSDy9Ib8dOe9hH3FKtu4NZBJEYeS-25bN7SweIO5q-bN8lMP9u6mR4be0TtVNUBLxUH_M-M6-VVuLdaaSLUE1j1aTJZ-a_WsAeMQ3G7Fl27Or3sYFsaayyKa14M"/>
+</div>
+<p class="font-stat-lg">MARCUS REED</p>
+<p class="font-label-sm uppercase text-vermillion">Design Direction</p>
+</div>
+</div>
+</section>
+<!-- Services Section: WEB & AI -->
+<section class="grid grid-cols-1 md:grid-cols-2 min-h-[600px] border-b border-[#FAFAFA]">
+<div class="p-12 md:divider-x flex flex-col justify-between group cursor-crosshair">
+<div class="font-label-sm uppercase text-vermillion">Service 01</div>
+<div>
+<h3 class="font-display-xl uppercase mb-8">WEB<br/>ENGINEERING</h3>
+<p class="font-body-md max-w-sm mb-12">We don't build sites. We build digital monoliths that convert through pure technical superiority.</p>
+<button class="border border-[#FAFAFA] px-12 py-4 font-label-sm uppercase hover:bg-[#FAFAFA] hover:text-[#0A0A0A] transition-all">Explore Tech Stack</button>
+</div>
+</div>
+<div class="p-12 bg-vermillion text-white flex flex-col justify-between group cursor-crosshair">
+<div class="font-label-sm uppercase text-primary-container">Service 02</div>
+<div>
+<h3 class="font-display-xl uppercase mb-8">AI<br/>INTEGRATION</h3>
+<p class="font-body-md max-w-sm mb-12 text-primary-container">Autonomous agents, LLM orchestration, and predictive systems that rewrite your operational DNA.</p>
+<button class="border border-primary-container text-primary-container px-12 py-4 font-label-sm uppercase hover:bg-primary-container hover:text-white transition-all">Deploy Models</button>
+</div>
+</div>
+</section>
+<!-- Projects Section: SELECTED WORKS -->
+<section class="px-12 py-24">
+<div class="flex justify-between items-end mb-24">
+<h2 class="font-headline-lg uppercase">SELECTED WORKS</h2>
+<div class="font-label-sm uppercase text-vermillion flex items-center gap-2">
+                    Archive (24) <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Project 1 -->
+<div class="group border border-[#FAFAFA] p-8 hover:border-vermillion transition-colors">
+<div class="aspect-video bg-surface-container-highest mb-8 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-br from-zinc-800 to-black flex items-center justify-center relative">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-80" data-alt="abstract digital render of flowing fluid metal in dark chrome and deep red accents with sharp geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpiflUoaW2og-mdbCjqLbwc869F4ouSsZhA-Yte0o6ahbOa6aSLIfmeKuIPfBbo636V7F408gBtV68i94kiuekuRuxpcnfcFMsqC0k5I0Rn5d98FRBCYWlbNjllWiKMkn82IkXMRHdNNihwxV-IeHOY-FIaUV2xioecfs92hFO-n5fT1m-JrQaN98hDqjqyUddpmayDC8d74wzEjBdkpZgXMi5NrbwR-ON99MQ2eSS1JL0kpgH6RFH1EhJikoqllPEMNKqkxm1M8c"/>
+<div class="absolute inset-0 flex items-center justify-center font-stat-lg text-white group-hover:scale-110 transition-transform">01</div>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-stat-lg uppercase">Synthos OS</h4>
+<span class="font-label-sm text-vermillion">2024</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm">A cognitive operating system for distributed edge devices.</p>
+</div>
+<!-- Project 2 -->
+<div class="group border border-[#FAFAFA] p-8 hover:border-vermillion transition-colors">
+<div class="aspect-video bg-surface-container-highest mb-8 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-tr from-zinc-900 to-vermillion/20 flex items-center justify-center relative">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-80" data-alt="minimalist 3D architectural render with clean lines and high contrast shadows of a futuristic data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8yI9fv9DwH4sOjG7-SvmQV2_P8G3RHT5SRzkvJK4_YO_-glp87yKjRFoE5um06cShA0mC7-uZu2hUOQW7pH9ITg9yADZfmJzqbaNx26HVA-3O9mZxedxU9juC2RiGTCc18cIRFup-jXweMLFeVZElw6DvWZioyrxa-gZkdEexqax0buxNO4U--n7PHkCRNF5D78NjIzrD9Vl2kDK0EhEb-ajYU7Xjvu2pdFQBTC-NOp6QAMwYJpsdKcqwdJmH7z0TP-ovf8PH6Rs"/>
+<div class="absolute inset-0 flex items-center justify-center font-stat-lg text-white group-hover:scale-110 transition-transform">02</div>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-stat-lg uppercase">Neural Stream</h4>
+<span class="font-label-sm text-vermillion">2023</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm">Real-time data visualization via neural-linked interfaces.</p>
+</div>
+<!-- Project 3 -->
+<div class="group border border-[#FAFAFA] p-8 hover:border-vermillion transition-colors">
+<div class="aspect-video bg-surface-container-highest mb-8 overflow-hidden">
+<div class="w-full h-full bg-gradient-to-b from-black to-zinc-700 flex items-center justify-center relative">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-80" data-alt="satellite view of a glowing earth network with illuminated pathways representing global commerce and digital connectivity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-Jt799XU-Dh2VyybBHRtvzAxLee8bR2iHgTwbT7mTptieMSPbXOv6P7Nj6C1x4Yc1Qq-tPFPmpZYeDY1wrqe6FO4zNCQ2mL7VaVpYCM1OGwRk8S5sjZcFCh1s-cALRGKUfPPjUTezF1rxXF6OBKwkaKiJRGGRkgmIVRS6SIdC0KC804-iA6-d-OUaAik1bwn4esl2zXaeZQYA7elz2GadKn-Md67UJrjG9lWicV-LHsD_DDGCkehl5ogpy-ODWC6Zq1qJWLQdET4"/>
+<div class="absolute inset-0 flex items-center justify-center font-stat-lg text-white group-hover:scale-110 transition-transform">03</div>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-stat-lg uppercase">Flux Commerce</h4>
+<span class="font-label-sm text-vermillion">2023</span>
+</div>
+<p class="font-body-md text-on-surface-variant text-sm">Next-gen retail engine with integrated AI inventory prediction.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#FAFAFA] text-[#0A0A0A] rectilinear 0px radius inverted high-contrast section border-t border-[#0A0A0A]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-12 py-24 w-full">
+<div class="flex flex-col justify-between">
+<div>
+<h2 class="text-4xl font-black text-[#0A0A0A] mb-8">MANIFESTO.AI</h2>
+<p class="font-['JetBrains_Mono'] text-sm uppercase max-w-sm">
+                        WE ARCHITECT THE INTELLIGENCE THAT ARCHITECTS THE WORLD.
+                    </p>
+</div>
+<div class="mt-12">
+<div class="font-['JetBrains_Mono'] text-xs uppercase mb-4">Contact us</div>
+<a class="text-2xl font-bold underline decoration-2 decoration-[#FF3D00] hover:text-[#FF3D00] transition-colors" href="mailto:hello@manifesto.ai">HELLO@MANIFESTO.AI</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<div class="font-['JetBrains_Mono'] text-xs uppercase text-[#0A0A0A]/40 mb-2">Legal</div>
+<a class="font-['JetBrains_Mono'] text-xs uppercase text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#FAFAFA] transition-colors inline-block w-fit" href="#">Privacy Policy</a>
+<a class="font-['JetBrains_Mono'] text-xs uppercase text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#FAFAFA] transition-colors inline-block w-fit" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="font-['JetBrains_Mono'] text-xs uppercase text-[#0A0A0A]/40 mb-2">Social</div>
+<a class="font-['JetBrains_Mono'] text-xs uppercase text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#FAFAFA] transition-colors inline-block w-fit" href="#">Twitter/X</a>
+<a class="font-['JetBrains_Mono'] text-xs uppercase text-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#FAFAFA] transition-colors inline-block w-fit" href="#">LinkedIn</a>
+</div>
+<div class="col-span-2 pt-12">
+<p class="font-['JetBrains_Mono'] text-xs uppercase">©2024 SWISS PUNK AI. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

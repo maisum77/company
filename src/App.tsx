@@ -4,14 +4,13 @@
  */
 
 import { motion, useScroll, useSpring } from 'motion/react';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import FeatureGrid from './components/FeatureGrid';
-import InteractiveSection from './components/InteractiveSection';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
 
 export default function App() {
+  const location = useLocation();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -28,6 +27,10 @@ export default function App() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
 
   return (
     <div className="relative selection:bg-aura-accent selection:text-white">
@@ -47,46 +50,13 @@ export default function App() {
         transition={{ type: 'spring', damping: 25, stiffness: 150, mass: 0.5 }}
       />
 
+      {/* Grain Overlay */}
+      <div className="grain"></div>
+
       <Navbar />
       
       <main>
-        <Hero />
-        <FeatureGrid />
-        
-        {/* Decorative Space */}
-        <div className="h-64 flex items-center justify-center overflow-hidden">
-          <motion.div 
-            initial={{ width: 0 }}
-            whileInView={{ width: "100%" }}
-            transition={{ duration: 1.5, ease: "circOut" }}
-            className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
-          />
-        </div>
-
-        <InteractiveSection />
-        
-        {/* Final CTA Section */}
-        <section className="py-32 px-6 bg-white text-black text-center">
-          <div className="max-w-4xl mx-auto space-y-12">
-             <motion.h2 
-               initial={{ opacity: 0, scale: 0.9 }}
-               whileInView={{ opacity: 1, scale: 1 }}
-               className="text-5xl md:text-8xl font-display font-bold tracking-tighter"
-             >
-               READY TO ASCEND?
-             </motion.h2>
-             <p className="text-xl md:text-2xl font-medium text-black/60 max-w-2xl mx-auto leading-relaxed">
-               Let's build the next generation of digital experiences together.
-             </p>
-             <motion.button 
-               whileHover={{ scale: 1.05 }}
-               whileTap={{ scale: 0.95 }}
-               className="px-12 py-6 rounded-full bg-black text-white font-bold text-xl hover:shadow-2xl transition-shadow"
-             >
-               Initiate Contact
-             </motion.button>
-          </div>
-        </section>
+        <Outlet />
       </main>
 
       <Footer />

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MANIFESTO.AI - Initiate Protocol</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Playfair+Display:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#7b7979",
+                        "primary-container": "#0a0a0a",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#474646",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#313030",
+                        "background": "#141313",
+                        "surface-bright": "#3a3939",
+                        "outline-variant": "#444748",
+                        "tertiary-container": "#1d0200",
+                        "surface-container-highest": "#353434",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-primary-fixed": "#1c1b1b",
+                        "secondary-container": "#454747",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-variant": "#353434",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#454747",
+                        "tertiary": "#ffb4a2",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#ffdad2",
+                        "secondary": "#c6c6c7",
+                        "on-tertiary-container": "#e53600",
+                        "surface-tint": "#c9c6c5",
+                        "surface": "#141313",
+                        "surface-container-high": "#2b2a2a",
+                        "on-error": "#690005",
+                        "primary": "#c9c6c5",
+                        "on-tertiary": "#621100",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-dim": "#141313",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-surface-variant": "#c4c7c7",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "on-secondary": "#2f3131",
+                        "outline": "#8e9192",
+                        "inverse-primary": "#5f5e5e",
+                        "surface-container": "#201f1f",
+                        "tertiary-fixed-dim": "#ffb4a2",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#8a1d00",
+                        "on-tertiary-fixed": "#3c0700",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "error-container": "#93000a"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    spacing: {
+                        "unit": "4px",
+                        "margin": "48px",
+                        "accent-underline": "2px",
+                        "divider-weight": "1px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "display-xl": ["Inter Tight", "sans-serif"],
+                        "body-md": ["Inter Tight", "sans-serif"],
+                        "stat-lg": ["JetBrains Mono", "monospace"],
+                        "label-sm": ["JetBrains Mono", "monospace"],
+                        "headline-lg": ["Inter Tight", "sans-serif"],
+                        "serif-accent": ["Playfair Display", "serif"],
+                        "display-2xl": ["Inter Tight", "sans-serif"]
+                    },
+                    fontSize: {
+                        "display-xl": ["80px", { lineHeight: "72px", letterSpacing: "-0.06em", fontWeight: "800" }],
+                        "body-md": ["18px", { lineHeight: "1.6", letterSpacing: "-0.01em", fontWeight: "400" }],
+                        "stat-lg": ["24px", { lineHeight: "1", fontWeight: "700" }],
+                        "label-sm": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-lg": ["48px", { lineHeight: "44px", letterSpacing: "-0.04em", fontWeight: "700" }],
+                        "serif-accent": ["32px", { lineHeight: "1.2", fontWeight: "400" }],
+                        "display-2xl": ["120px", { lineHeight: "100px", letterSpacing: "-0.06em", fontWeight: "900" }]
+                    },
+                    backgroundImage: {
+                        'grain': 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.015%22/%3E%3C/svg%3E")'
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #FAFAFA;
+        }
+        .bg-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        /* Custom Input Styles overriding defaults */
+        [type='text'], [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], textarea, select {
+            background-color: transparent;
+            border-color: #FAFAFA;
+            border-width: 0 0 1px 0;
+            border-radius: 0;
+            padding: 12px 0;
+            color: #FAFAFA;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 16px;
+        }
+        [type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #FF3D00;
+            border-width: 0 0 2px 0;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col font-body-md overflow-x-hidden selection:bg-[#FF3D00] selection:text-[#0A0A0A]">
+<div class="bg-grain"></div>
+<!-- TopAppBar -->
+<header class="w-full border-b border-[#FAFAFA] bg-[#0A0A0A] text-[#FAFAFA] relative z-40">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-[1440px] mx-auto">
+<a class="text-2xl font-black text-[#FAFAFA] tracking-widest uppercase hover:text-[#FF3D00] transition-colors duration-200" href="#">
+                MANIFESTO.AI
+            </a>
+<nav class="hidden md:flex space-x-8 font-['Inter_Tight'] tracking-tighter uppercase">
+<a class="text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-colors duration-200" href="#">Protocol</a>
+<a class="text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-colors duration-200" href="#">Intelligence</a>
+<a class="text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-colors duration-200" href="#">Archive</a>
+<a class="text-[#FAFAFA] border-b-2 border-[#FF3D00] pb-1 hover:text-[#FF3D00] transition-colors duration-200" href="#">Direct</a>
+</nav>
+<button class="bg-[#FAFAFA] text-[#0A0A0A] font-stat-lg text-[14px] px-6 py-2 uppercase tracking-wider hover:bg-[#FF3D00] hover:text-[#FAFAFA] transition-colors duration-200 scale-95 duration-100 hidden md:block border border-[#FAFAFA]">
+                Connect
+            </button>
+<button class="md:hidden text-[#FAFAFA]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto relative z-10 pt-24 pb-32">
+<!-- Hero Section -->
+<section class="px-12 mb-32 border-b border-[#FAFAFA] pb-24">
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-12 md:col-span-9">
+<h1 class="font-display-2xl text-[#FAFAFA] uppercase m-0 leading-none">
+                        Initiate<br/>
+                        Protocol
+                    </h1>
+</div>
+<div class="col-span-12 md:col-span-3 flex flex-col justify-end">
+<p class="font-label-sm text-[#FAFAFA] uppercase tracking-widest border-l border-[#FAFAFA] pl-4 mb-4">
+                        Status: Awaiting Signal<br/>
+                        Node: Global Open
+                    </p>
+</div>
+</div>
+</section>
+<!-- Asymmetric Layout: Form & Details -->
+<section class="px-12 grid grid-cols-12 gap-x-12 gap-y-24">
+<!-- Form Canvas -->
+<div class="col-span-12 lg:col-span-7">
+<div class="mb-12">
+<h2 class="font-headline-lg text-[#FAFAFA] uppercase mb-4">Secure Transmission</h2>
+<p class="font-body-md text-[#FAFAFA]/60">Establish direct cryptographic linkage with our core systems.</p>
+</div>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex flex-col relative group">
+<label class="font-label-sm text-[#FAFAFA] uppercase mb-2 group-focus-within:text-[#FF3D00] transition-colors" for="name">Operative Designation (Name)</label>
+<input class="w-full" id="name" name="name" required="" type="text"/>
+</div>
+<div class="flex flex-col relative group">
+<label class="font-label-sm text-[#FAFAFA] uppercase mb-2 group-focus-within:text-[#FF3D00] transition-colors" for="org">Affiliation (Organization)</label>
+<input class="w-full" id="org" name="org" type="text"/>
+</div>
+</div>
+<div class="flex flex-col relative group">
+<label class="font-label-sm text-[#FAFAFA] uppercase mb-2 group-focus-within:text-[#FF3D00] transition-colors" for="inquiry">Protocol Type (Inquiry)</label>
+<select class="w-full appearance-none" id="inquiry" name="inquiry" required="">
+<option class="bg-[#0A0A0A] text-[#FAFAFA]/50" disabled="" selected="" value="">Select Vector...</option>
+<option class="bg-[#0A0A0A]" value="strategic">Strategic Alignment</option>
+<option class="bg-[#0A0A0A]" value="technical">Technical Integration</option>
+<option class="bg-[#0A0A0A]" value="media">Media Interception</option>
+<option class="bg-[#0A0A0A]" value="other">Anomalous Request</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 bottom-3 text-[#FAFAFA] pointer-events-none">expand_more</span>
+</div>
+<div class="flex flex-col relative group">
+<label class="font-label-sm text-[#FAFAFA] uppercase mb-2 group-focus-within:text-[#FF3D00] transition-colors" for="message">Encrypted Payload (Message)</label>
+<textarea class="w-full resize-none" id="message" name="message" required="" rows="5"></textarea>
+</div>
+<div class="pt-8">
+<button class="bg-[#FAFAFA] text-[#0A0A0A] font-stat-lg text-[18px] px-8 py-4 uppercase tracking-widest border border-[#FAFAFA] hover:bg-[#FF3D00] hover:border-[#FF3D00] hover:text-[#FAFAFA] transition-all duration-300 w-full md:w-auto" type="submit">
+                            Transmit Signal
+                        </button>
+</div>
+</form>
+</div>
+<!-- Direct Channels & Presence Canvas -->
+<div class="col-span-12 lg:col-span-4 lg:col-start-9 flex flex-col gap-16 border-l-0 lg:border-l border-[#FAFAFA] lg:pl-12">
+<!-- Channels -->
+<div>
+<h3 class="font-label-sm text-[#FAFAFA]/60 uppercase tracking-widest mb-6">Direct Channels</h3>
+<ul class="space-y-6">
+<li>
+<a class="font-stat-lg text-[#FAFAFA] hover:text-[#FF3D00] border-b-2 border-transparent hover:border-[#FF3D00] pb-1 transition-all inline-block break-all" href="mailto:hello@manifesto.ai">
+                                hello@manifesto.ai
+                            </a>
+</li>
+<li>
+<div class="flex gap-6 mt-4">
+<a class="font-label-sm text-[#FAFAFA] uppercase border border-[#FAFAFA] px-4 py-2 hover:bg-[#FF3D00] hover:border-[#FF3D00] transition-colors" href="#">X/Twitter</a>
+<a class="font-label-sm text-[#FAFAFA] uppercase border border-[#FAFAFA] px-4 py-2 hover:bg-[#FF3D00] hover:border-[#FF3D00] transition-colors" href="#">LinkedIn</a>
+</div>
+</li>
+</ul>
+</div>
+<div class="w-full h-px bg-[#FAFAFA]"></div>
+<!-- Global Presence -->
+<div>
+<h3 class="font-label-sm text-[#FAFAFA]/60 uppercase tracking-widest mb-8">Distributed Intelligence</h3>
+<div class="space-y-8">
+<div class="group">
+<div class="flex justify-between items-end border-b border-[#FAFAFA]/30 pb-2 mb-2 group-hover:border-[#FF3D00] transition-colors">
+<h4 class="font-stat-lg text-[#FAFAFA] uppercase">London</h4>
+<span class="font-label-sm text-[#FAFAFA]/60">Node 01</span>
+</div>
+<p class="font-body-md text-[#FAFAFA]/80 text-sm">Coordinates restricted.<br/>Awaiting clearance.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-end border-b border-[#FAFAFA]/30 pb-2 mb-2 group-hover:border-[#FF3D00] transition-colors">
+<h4 class="font-stat-lg text-[#FAFAFA] uppercase">San Francisco</h4>
+<span class="font-label-sm text-[#FAFAFA]/60">Node 02</span>
+</div>
+<p class="font-body-md text-[#FAFAFA]/80 text-sm">Terminal active.<br/>Signal strong.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-end border-b border-[#FAFAFA]/30 pb-2 mb-2 group-hover:border-[#FF3D00] transition-colors">
+<h4 class="font-stat-lg text-[#FAFAFA] uppercase">Tokyo</h4>
+<span class="font-label-sm text-[#FAFAFA]/60">Node 03</span>
+</div>
+<p class="font-body-md text-[#FAFAFA]/80 text-sm">Latency optimal.<br/>Monitoring channel.</p>
+</div>
+</div>
+</div>
+<!-- Decorative Asset -->
+<div class="mt-auto pt-16">
+<div class="w-full aspect-square border border-[#FAFAFA] relative overflow-hidden group">
+<img alt="Abstract architectural lines forming a stark geometric pattern in high contrast monochrome" class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-opacity duration-500" data-alt="Abstract architectural lines forming a stark geometric pattern in high contrast monochrome with deep shadows and severe lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvQZsNJ2rRdSBaOuvJ9xXwSJEHfFb8Ovv4Fba0wmT3UkHkr-g_fNjuL2D2M22ODCQiKV5p48qqNTLfpONCR17gAhx9XCKEfbcDDDyQOa33BOzc0A4W3YUR3PMIW26hGMWZEzEK6q9MT7Bk0qPfRSKnzj8OJ9uOQU-W2bRllBKPGTTq89B65Jz1sy_OTfAPp_O8w3VW6sKTsw5qCu36PlAHOeHjiwj8oAE8yYlv9IslLF7ilCqIj61-oMZGNbwCjw3DNH4ZzIh2wG8"/>
+<div class="absolute inset-0 border-[4px] border-transparent group-hover:border-[#FF3D00] transition-colors duration-500 pointer-events-none"></div>
+<span class="absolute bottom-2 right-2 font-label-sm text-[#FAFAFA] bg-[#0A0A0A] px-2 border border-[#FAFAFA]">SYS.IMG.04</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#FAFAFA] bg-[#0A0A0A] relative z-40 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full max-w-[1440px] mx-auto gap-4">
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#FAFAFA] font-bold">
+                ©2024 MANIFESTO.AI — ALL PROTOCOLS OBSERVED
+            </span>
+<nav class="flex flex-wrap gap-6 font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest">
+<a class="text-[#FAFAFA] opacity-80 hover:opacity-100 hover:underline decoration-[#FF3D00] decoration-2 underline-offset-4 transition-all" href="#">Privacy</a>
+<a class="text-[#FAFAFA] opacity-80 hover:opacity-100 hover:underline decoration-[#FF3D00] decoration-2 underline-offset-4 transition-all" href="#">Security</a>
+<a class="text-[#FAFAFA] opacity-80 hover:opacity-100 hover:underline decoration-[#FF3D00] decoration-2 underline-offset-4 transition-all" href="#">Terms</a>
+<a class="text-[#FAFAFA] opacity-80 hover:opacity-100 hover:underline decoration-[#FF3D00] decoration-2 underline-offset-4 transition-all" href="#">Status</a>
+</nav>
+</div>
+</footer>
+</body></html>

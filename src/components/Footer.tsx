@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Github, Twitter, Instagram, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -28,10 +29,10 @@ export default function Footer() {
           <div>
              <h4 className="text-xs font-bold uppercase tracking-widest text-white/30 mb-6">Navigation</h4>
              <ul className="space-y-3 text-sm font-medium">
-               <li><a href="#" className="hover:text-aura-accent transition-colors">Showcase</a></li>
-               <li><a href="#" className="hover:text-aura-accent transition-colors">Laboratory</a></li>
-               <li><a href="#" className="hover:text-aura-accent transition-colors">Archive</a></li>
-               <li><a href="#" className="hover:text-aura-accent transition-colors">Process</a></li>
+               <li><Link to="/projects" className="hover:text-aura-accent transition-colors">Projects</Link></li>
+               <li><Link to="/case-studies" className="hover:text-aura-accent transition-colors">Case Studies</Link></li>
+               <li><Link to="/services" className="hover:text-aura-accent transition-colors">Services</Link></li>
+               <li><Link to="/contact" className="hover:text-aura-accent transition-colors">Contact</Link></li>
              </ul>
           </div>
 

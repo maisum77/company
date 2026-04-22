@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Services - MANIFESTO.AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;800;900&amp;family=JetBrains+Mono:wght@500;700&amp;family=Playfair+Display:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#2f3131",
+                      "surface-bright": "#3a3939",
+                      "on-error": "#690005",
+                      "error": "#ffb4ab",
+                      "tertiary": "#ffb4a2",
+                      "on-secondary-fixed-variant": "#454747",
+                      "on-secondary-container": "#b4b5b5",
+                      "on-tertiary-container": "#e53600",
+                      "outline": "#8e9192",
+                      "on-surface-variant": "#c4c7c7",
+                      "on-primary-container": "#7b7979",
+                      "on-primary-fixed": "#1c1b1b",
+                      "surface-container-highest": "#353434",
+                      "on-surface": "#e5e2e1",
+                      "primary": "#c9c6c5",
+                      "surface-container-high": "#2b2a2a",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-fixed": "#ffdad2",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary": "#c6c6c7",
+                      "background": "#141313",
+                      "error-container": "#93000a",
+                      "inverse-on-surface": "#313030",
+                      "inverse-primary": "#5f5e5e",
+                      "tertiary-fixed-dim": "#ffb4a2",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary-container": "#0a0a0a",
+                      "outline-variant": "#444748",
+                      "primary-fixed": "#e5e2e1",
+                      "tertiary-container": "#1d0200",
+                      "on-tertiary-fixed-variant": "#8a1d00",
+                      "on-tertiary": "#621100",
+                      "on-primary": "#313030",
+                      "surface-dim": "#141313",
+                      "surface-container": "#201f1f",
+                      "secondary-fixed-dim": "#c6c6c7",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "on-tertiary-fixed": "#3c0700",
+                      "surface-tint": "#c9c6c5",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "on-primary-fixed-variant": "#474646",
+                      "surface-variant": "#353434",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-background": "#e5e2e1",
+                      "surface": "#141313",
+                      "secondary-container": "#454747",
+                      "vermillion": "#FF3D00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "0px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "margin": "48px",
+                      "accent-underline": "2px",
+                      "unit": "4px",
+                      "divider-weight": "1px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter Tight"
+                      ],
+                      "label-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "Inter Tight"
+                      ],
+                      "display-2xl": [
+                              "Inter Tight"
+                      ],
+                      "display-xl": [
+                              "Inter Tight"
+                      ],
+                      "stat-lg": [
+                              "JetBrains Mono"
+                      ],
+                      "serif-accent": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-2xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "100px",
+                                      "letterSpacing": "-0.06em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "display-xl": [
+                              "80px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.06em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "stat-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "serif-accent": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            z-index: 50;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(250, 250, 250, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(250, 250, 250, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-[#0A0A0A] text-[#FAFAFA] min-h-screen antialiased selection:bg-vermillion selection:text-white flex flex-col">
+<!-- TopAppBar -->
+<nav class="bg-[#0A0A0A] w-full top-0 left-0 border-b border-[#FAFAFA] sticky z-40">
+<div class="flex justify-between items-center px-12 h-20 w-full max-w-[1440px] mx-auto">
+<a class="text-2xl font-black text-[#FAFAFA] tracking-tighter" href="#">MANIFESTO.AI</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#FAFAFA] border-b-2 border-[#FF3D00] pb-1 font-['Inter_Tight'] uppercase tracking-tighter text-sm cursor-pointer transition-all active:scale-95" href="#">Capabilities</a>
+<a class="text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-colors duration-200 font-['Inter_Tight'] uppercase tracking-tighter text-sm cursor-pointer transition-all active:scale-95" href="#">Orchestration</a>
+<a class="text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-colors duration-200 font-['Inter_Tight'] uppercase tracking-tighter text-sm cursor-pointer transition-all active:scale-95" href="#">Agents</a>
+<a class="text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-colors duration-200 font-['Inter_Tight'] uppercase tracking-tighter text-sm cursor-pointer transition-all active:scale-95" href="#">Analytics</a>
+<a class="text-[#FAFAFA]/60 hover:text-[#FF3D00] transition-colors duration-200 font-['Inter_Tight'] uppercase tracking-tighter text-sm cursor-pointer transition-all active:scale-95" href="#">Process</a>
+</div>
+<button class="bg-[#FAFAFA] text-[#0A0A0A] font-label-sm text-label-sm uppercase px-6 py-3 hover:bg-[#FF3D00] hover:text-white transition-colors duration-200">Contact</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-margin">
+<!-- Hero Section -->
+<section class="py-32 grid grid-cols-12 gap-gutter border-b border-divider-weight border-[#FAFAFA]/20 relative">
+<div class="col-span-12 md:col-span-10">
+<h1 class="font-display-2xl text-display-2xl uppercase break-words mb-12">Orchestrating<br/>Intelligence</h1>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7">
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+                    Moving beyond generic AI endpoints. We architect bespoke, multi-modal intelligence systems that understand context, execute complex workflows, and adapt to your enterprise's structural reality.
+                </p>
+<div class="mt-12">
+<span class="font-label-sm text-label-sm border border-[#FAFAFA]/30 px-4 py-2 text-primary">SYSTEMS ARCHITECTURE V2.4</span>
+</div>
+</div>
+<!-- Decorative vertical line -->
+<div class="hidden lg:block absolute right-[25%] top-0 h-full w-[1px] bg-[#FAFAFA]/10"></div>
+</section>
+<!-- Capability 01 -->
+<section class="py-24 grid grid-cols-12 gap-gutter border-b border-divider-weight border-[#FAFAFA]/20">
+<div class="col-span-12 md:col-span-4 flex flex-col justify-between">
+<span class="font-stat-lg text-[120px] leading-none text-[#FAFAFA]/20 block mb-8">01</span>
+<h2 class="font-headline-lg text-headline-lg uppercase">LLM<br/>Orchestration</h2>
+</div>
+<div class="col-span-12 md:col-span-7 md:col-start-6 flex flex-col justify-center">
+<p class="font-body-md text-body-md text-on-surface mb-8">
+                    Single-model reliance is a structural vulnerability. Our orchestration layers dynamically route queries across Claude, GPT-4, and specialized local models based on task complexity, cost constraints, and required context windows.
+                </p>
+<div class="grid grid-cols-2 gap-8 border-t border-[#FAFAFA]/20 pt-8 mt-4">
+<div>
+<h4 class="font-label-sm text-label-sm text-vermillion mb-2">DYNAMIC ROUTING</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Real-time switching between inference engines to optimize performance vs. latency.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-vermillion mb-2">CONTEXT OPTIMIZATION</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Intelligent retrieval architectures that maximize relevant context while minimizing token burn.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Capability 02: Dark Background with High Contrast -->
+<section class="py-24 grid grid-cols-12 gap-gutter bg-[#050505] -mx-margin px-margin border-b border-divider-weight border-[#FAFAFA]/20 relative overflow-hidden">
+<!-- Background Accent -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-vermillion/5 mix-blend-screen blur-3xl"></div>
+<div class="col-span-12 md:col-span-5 relative z-10">
+<span class="font-stat-lg text-[120px] leading-none text-vermillion/20 block mb-8">02</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-vermillion">Autonomous<br/>Agents</h2>
+<div class="mt-12 border-l-2 border-vermillion pl-6">
+<p class="font-label-sm text-label-sm text-[#FAFAFA] mb-4">DEPLOYMENT STATUS</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Active monitoring required. Agents operate with assigned agency levels, executing multi-step workflows across internal API surfaces without continuous human prompting.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 relative z-10 flex items-center">
+<!-- Abstract Representation of Agents -->
+<div class="w-full h-full min-h-[400px] border border-[#FAFAFA]/10 bg-black/50 p-8 flex flex-col justify-between grid-bg">
+<div class="flex justify-between items-center border-b border-[#FAFAFA]/20 pb-4">
+<span class="font-label-sm text-label-sm text-[#FAFAFA]/50">TASK: MARKET_ANALYSIS_V3</span>
+<span class="font-label-sm text-label-sm text-vermillion px-2 py-1 border border-vermillion/30 bg-vermillion/10">EXECUTING</span>
+</div>
+<div class="space-y-4 py-8">
+<div class="flex items-start gap-4 opacity-50">
+<span class="material-symbols-outlined text-sm mt-1">check_circle</span>
+<p class="font-label-sm text-xs">Data ingestion from primary sources complete.</p>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-sm mt-1 text-vermillion animate-pulse">sync</span>
+<p class="font-label-sm text-xs text-[#FAFAFA]">Synthesizing sentiment anomalies across quarterly reports...</p>
+</div>
+<div class="flex items-start gap-4 opacity-30">
+<span class="material-symbols-outlined text-sm mt-1">schedule</span>
+<p class="font-label-sm text-xs">Pending: Draft summary generation.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Capability 03 -->
+<section class="py-24 grid grid-cols-12 gap-gutter border-b border-divider-weight border-[#FAFAFA]/20">
+<div class="col-span-12 md:col-span-5 md:col-start-8 flex flex-col justify-between order-1 md:order-2">
+<span class="font-stat-lg text-[120px] leading-none text-[#FAFAFA]/20 block mb-8 text-right">03</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-right">Predictive<br/>Analytics</h2>
+<p class="font-body-md text-body-md text-on-surface mt-8 text-right">
+                    Transforming latent data into foresight. We build deterministic models that identify patterns before they become trends, utilizing proprietary clustering algorithms and time-series forecasting.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-6 order-2 md:order-1 mt-12 md:mt-0">
+<!-- Technical Data Vis Representation -->
+<div class="border border-[#FAFAFA]/20 p-6 flex flex-col gap-6">
+<div class="flex justify-between items-end border-b border-[#FAFAFA]/20 pb-2">
+<span class="font-label-sm text-label-sm text-primary">CONFIDENCE INTERVAL</span>
+<span class="font-stat-lg text-xl">94.2%</span>
+</div>
+<div class="h-48 w-full border-b border-l border-[#FAFAFA]/30 relative flex items-end gap-2 px-2 pb-0 pt-8">
+<!-- Simulated Bar Chart -->
+<div class="w-1/6 bg-[#FAFAFA]/10 h-[30%]"></div>
+<div class="w-1/6 bg-[#FAFAFA]/20 h-[45%]"></div>
+<div class="w-1/6 bg-[#FAFAFA]/30 h-[60%]"></div>
+<div class="w-1/6 bg-vermillion/60 h-[85%] border-t-2 border-vermillion relative group">
+<div class="absolute -top-8 left-1/2 transform -translate-x-1/2 font-label-sm text-[10px] bg-black border border-[#FAFAFA]/30 px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">ANOMALY_DETECTED</div>
+</div>
+<div class="w-1/6 bg-[#FAFAFA]/40 h-[75%]"></div>
+<div class="w-1/6 bg-[#FAFAFA]/50 h-[90%]"></div>
+</div>
+<div class="flex justify-between text-[10px] font-label-sm text-[#FAFAFA]/50">
+<span>T-4</span>
+<span>T-3</span>
+<span>T-2</span>
+<span class="text-vermillion">T-1 (CRITICAL)</span>
+<span>T-0</span>
+<span>T+1</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 border-b border-divider-weight border-[#FAFAFA]/20 overflow-hidden">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-16">How We Work</h2>
+<div class="flex flex-nowrap overflow-x-auto gap-8 pb-8 hide-scrollbar" style="scrollbar-width: none;">
+<!-- Step 1 -->
+<div class="min-w-[300px] flex-shrink-0 border border-[#FAFAFA]/20 p-8 hover:border-vermillion transition-colors duration-300 group">
+<div class="font-label-sm text-label-sm text-vermillion mb-8">PHASE 01</div>
+<h3 class="font-body-md text-2xl font-bold mb-4 group-hover:text-vermillion transition-colors">Research</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Deep architectural audit of existing data structures and operational bottlenecks.</p>
+</div>
+<!-- Step 2 -->
+<div class="min-w-[300px] flex-shrink-0 border border-[#FAFAFA]/20 p-8 hover:border-vermillion transition-colors duration-300 group">
+<div class="font-label-sm text-label-sm text-vermillion mb-8">PHASE 02</div>
+<h3 class="font-body-md text-2xl font-bold mb-4 group-hover:text-vermillion transition-colors">Prototype</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Rapid deployment of a constrained MVP to validate logic and integration points.</p>
+</div>
+<!-- Step 3 -->
+<div class="min-w-[300px] flex-shrink-0 border border-[#FAFAFA]/20 p-8 hover:border-vermillion transition-colors duration-300 group">
+<div class="font-label-sm text-label-sm text-vermillion mb-8">PHASE 03</div>
+<h3 class="font-body-md text-2xl font-bold mb-4 group-hover:text-vermillion transition-colors">Deploy</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Production rollout with fail-safes, logging, and performance telemetry.</p>
+</div>
+<!-- Step 4 -->
+<div class="min-w-[300px] flex-shrink-0 border border-[#FAFAFA]/20 p-8 hover:border-vermillion transition-colors duration-300 group">
+<div class="font-label-sm text-label-sm text-vermillion mb-8">PHASE 04</div>
+<h3 class="font-body-md text-2xl font-bold mb-4 group-hover:text-vermillion transition-colors">Optimize</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Continuous fine-tuning of prompts, context retrieval, and routing parameters.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 flex flex-col items-center justify-center text-center">
+<a class="inline-block group" href="#">
+<h2 class="font-display-xl text-display-xl uppercase tracking-tighter mb-4 group-hover:text-vermillion transition-colors duration-300">Scale Your<br/>Intelligence</h2>
+<div class="w-full h-1 bg-[#FAFAFA] group-hover:bg-vermillion transition-colors duration-300 mt-2"></div>
+</a>
+<p class="font-label-sm text-label-sm mt-8 text-[#FAFAFA]/60 uppercase tracking-widest">Initiate Protocol</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0A0A0A] w-full bottom-0 border-t border-[#FAFAFA]">
+<div class="flex justify-between items-center px-12 py-8 w-full max-w-[1440px] mx-auto">
+<span class="text-lg font-bold text-[#FAFAFA]">MANIFESTO.AI</span>
+<span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#FAFAFA]">©2024 MANIFESTO.AI ALL RIGHTS RESERVED</span>
+<div class="flex gap-6">
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#FAFAFA] hover:underline decoration-[#FF3D00] decoration-2 underline-offset-4" href="#">Privacy</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#FAFAFA] hover:underline decoration-[#FF3D00] decoration-2 underline-offset-4" href="#">Terms</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#FAFAFA] hover:underline decoration-[#FF3D00] decoration-2 underline-offset-4" href="#">Twitter</a>
+<a class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-[#FAFAFA] hover:underline decoration-[#FF3D00] decoration-2 underline-offset-4" href="#">Github</a>
+</div>
+</div>
+</footer>
+</body></html>
